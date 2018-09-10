@@ -1,12 +1,10 @@
 ---
-- name: Running ftp user creation script
   hosts: all
   gather_facts: yes
   tasks:
-
-  - win_shell: C:\scripts_ftp\./CreateUsers.vbs
+  - name: Running ftp user creation script
+    win_shell: C:\scripts_ftp\./CreateUsers.vbs
     args:
       executable: cmd
     register: results
-  - debug:
-      var: results.stdout_lines
+   
