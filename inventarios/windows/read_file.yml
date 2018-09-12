@@ -1,0 +1,6 @@
+ - hosts: all 
+   vars: 
+      contents: "{{ lookup('file', 'c:\ansible.log')}}" 
+   tasks: 
+      - debug: msg="the value of ansible is {{ contents }}" 
+

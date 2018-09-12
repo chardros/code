@@ -1,0 +1,6 @@
+ - hosts: all 
+   vars: 
+      contents: "{{ lookup('file', '/tmp/ansible.tmp') }}" 
+   tasks: 
+      - debug: msg="{{ contents }}" 
+
