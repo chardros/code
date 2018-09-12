@@ -1,6 +1,0 @@
-- name: Cambia de directorio y ejecuta un script
-  hosts: all
-  gather_facts: false
-  tasks:
-    nsme :Run Script 
-    script: create_user.vbs  >> somelog.txt
