@@ -1,9 +1,11 @@
-
-- name: Find /var/log files equal or greater than 10 megabytes ending with .old or .log.gz
-  hosts: all
-  gather_facts: no 
-
+- hosts: all
+  tasks
+  - name: Find /var/log files equal or greater than 10 megabytes ending with .old or .log.gz
   find:
     paths: /var/log
     patterns: '*.old,*.log.gz'
     size: 10m
+    register: files_matched
+
+  - debug:
+      msg: "{{ files_matched.files }}"
