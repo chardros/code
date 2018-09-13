@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  tasks
+  tasks:
     - name: find files biger than 10Mb 
       find:
         paths: /var/log
