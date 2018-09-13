@@ -9,4 +9,4 @@
     
     - name: Print version
       debug:
-        msg: "Find Result: {{ find_result.stdout }}"
+        msg: "Find Result:"
