@@ -1,9 +1,8 @@
 - hosts: all
   tasks
-  - name: list files
+  - name: 
     find:
       paths: /var/log
-      patterns: '*.old,*.log.gz'
       size: 10m
       register: files_matched
 
