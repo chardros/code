@@ -2,4 +2,4 @@
   vars:
      contents: "{{ lookup('file', '/tmp/ansible.tmp') }}"
   tasks:
-     - debug: msg="the value of ansible is {{ contents }}"
+     - debug: msg="The file contents: {{ contents }}"
