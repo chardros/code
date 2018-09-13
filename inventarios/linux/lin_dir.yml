@@ -6,6 +6,3 @@
         paths: /var/log
         size: 10m
       register: files_matched
-    
-    - debug:
-      msg: "{{ files_matched.files }}"
