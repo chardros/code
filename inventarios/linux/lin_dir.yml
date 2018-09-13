@@ -8,5 +8,5 @@
       register: find_result
     
     - name: Print version
-      debug:
-        msg: "Find Result:"
+      debug: var=find_result
+        msg: "Busqueda completa" 
