@@ -1,9 +1,8 @@
 ---
 - hosts: all
-  gather_facts: no
   tasks:
-- name: List c:\windows files equal or greater than 10 
-  win_find:
-    paths: c:\windows
-    patterns: '*'
-    size: 100m
+    - name: List c:\windows files equal or greater than 10 
+      win_find:
+      paths: c:\windows
+      patterns: '*'
+      size: 100m
