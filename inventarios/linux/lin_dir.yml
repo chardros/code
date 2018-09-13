@@ -9,4 +9,4 @@
     
     - name: Print version
       debug:
-        msg: "Busqueda completa {{ find_result.path }}"
+        msg: "Busqueda completa {{ find_result.files }}"
