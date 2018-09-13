@@ -1,7 +1,7 @@
 - name: List c:\windows files equal or greater than 10 
   hosts: all
   gather_facts: no 
-  find:
+  win_find:
     paths: c:\windows
     patterns: '*'
     size: 100m
