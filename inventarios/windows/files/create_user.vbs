@@ -23,7 +23,6 @@ Next
 
 If Not selectedSite Is Nothing Then
     For j = 0 To 1
-       Wscript.echo j
        selectedSite.CreateUserEx Cstr(j),Cstr(j),0,Cstr(j),Cstr(j),True,False,"Default settings"
     Next
 
