@@ -1,4 +1,8 @@
+
 - name: Find /var/log files equal or greater than 10 megabytes ending with .old or .log.gz
+  hosts: all
+  gather_facts: no 
+
   find:
     paths: /var/log
     patterns: '*.old,*.log.gz'
