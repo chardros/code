@@ -1,4 +1,4 @@
-- name: Find /var/log files equal or greater than 10 
+- name: List c:\windows files equal or greater than 10 
   hosts: all
   gather_facts: no 
   find:
