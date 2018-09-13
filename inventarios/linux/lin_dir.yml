@@ -4,5 +4,5 @@
     - name: find files biger than 10Mb 
       find:
         paths: /var/log
-        size: 10m
-      register: files_matched
+        patterns: [ '*.log', '*.old' ]
+      register: find_result
