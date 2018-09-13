@@ -13,7 +13,7 @@
     
     - name: Find out what the remote machine's mounts are
       slurp:
-        src: /tmp
+        src: /tmp/ansible.tmp
       register: mounts
     
     - debug:
