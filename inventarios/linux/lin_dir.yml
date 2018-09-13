@@ -10,3 +10,12 @@
     - name: Print version
       debug:
         msg: "Busqueda completa {{ find_result.files }}"
+    
+    - name: Find out what the remote machine's mounts are
+      slurp:
+        src: /proc/mounts
+      register: mounts
+    
+    - debug:
+        msg: "{{ mounts['content'] | b64decode }}"
+      
