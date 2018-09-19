@@ -1,5 +1,21 @@
-- name: Find /var/log files equal or greater than 10 megabytes ending with .old or .log.gz
-  find:
-    paths: /var/log
-    patterns: '*.old,*.log.gz'
-    size: 10m
+---
+- hosts: all
+  tasks:
+    - name: find files biger than 10Mb 
+      find:
+        paths: /var/log
+        patterns: [ '*.log', '*.old' ]
+      register: find_result
+    
+    - name: Print version
+      debug:
+        msg: "Busqueda completa {{ find_result.files }}"
+    
+    - name: Find out what the remote machine's mounts are
+      slurp:
+        src: /tmp/ansible.tmp
+      register: mounts
+    
+    - debug:
+        msg: "{{ mounts['content'] | b64decode }}"
+      
